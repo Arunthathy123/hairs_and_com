@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#d4d4d4] shadow-2xl px-1 md:px-10 ">
+        <div class=" mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="Images/logo.png" alt="Logo" class="h-20 w-auto mr-2">  
+            </a>
+            <button id="menu-toggle" class="lg:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <nav id="menu" class="hidden lg:flex space-x-16">
+                <a href="Home.html" class="nav-link text-gray-800 hover:text-[#026DB8] font-medium text-sx">Home</a>
+                <a href="AboutUS.html" class="nav-link text-gray-800 hover:text-[#026DB8] font-medium text-sx">About</a>
+                <a href="#" class="nav-link text-gray-800 hover:text-[#026DB8] font-medium text-sx">Holiday</a>
+                <a href="#" class="nav-link text-gray-800 hover:text-[#026DB8] font-medium text-sx">Visa</a>
+                <a href="#" class="nav-link text-gray-800 hover:text-[#026DB8] font-medium text-sx">City Tours</a>
+                <a href="#" class="nav-link text-gray-800 hover:text-[#026DB8] font-medium text-sx">Offers</a>
+                <a href="#" class="nav-link text-gray-800 hover:text-[#026DB8] font-medium text-sx">Blogs</a>
+                <button class="bg-[#026DB8] -mt-2 text-white px-10 py-2 rounded-full">Contact</button>
+            </nav>
+            
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-md p-4 space-y-2">
+            <a href="#" class="block text-gray-800 hover:text-[#026DB8] font-semibold text-[16px]">Home</a>
+            <a href="#" class="block text-gray-800 hover:text-[#026DB8] font-semibold text-[16px]">About</a>
+            <a href="#" class="block text-gray-800 hover:text-[#026DB8] font-semibold text-[16px]">Services</a>
+            <a href="#" class="block text-gray-800 hover:text-[#026DB8] font-semibold text-[16px]">Contact</a>
+        </div>
+    </header>
+    <main >
+        <section class="relative w-full -mt-40 h-[700px] bg-cover bg-center flex items-center justify-start text-center text-white" style="background-image: url('Images/aboutUSBanner.jpg'); ">
+            <div class="p-8 rounded-lg max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold mt-64">Blogs</h1>
+            </div>
+        </section>
+        <section >
+            <h4 class="  px-12 py-4"><span class="text-gray-950">Home .</span><span class="text-[#026DB8] ml-2">Blogs</span></h4>
+            <hr class="border-t-2 border-[#e3e3e3]">
+        </section>
+        <section class="flex flex-col lg:flex-row justify-between items-end px-6 lg:px-12 mt-6 gap-3">
+            <h4 class=" text-3xl lg:text-5xl w-full lg:w-1/2 font-bold text-gray-950">Adventure Awaits, <br/>
+                Stories to Inspire</h4>
+            <h4 class="text-lg lg:text-2xl w-full lg:w-1/2 font-bold text-[#026DB8B2] ">Get inspired with travel tips, destination guides, and
+                hidden gems that make every journey unforgettable</h4>
+
+        </section>
+
+        <div class="flex flex-col lg:flex-row">
+            <section class="mt-12 w-full lg:w-[60%]">
+                <div class="grid md:grid-cols-1 gap-6">
+                    <div class="h-[500px]  overflow-y-scroll p-4 bg-transparent border-0 " id="cardContainer">
+                    </div>
+        
+                    <div class="flex justify-center gap-0 mt-4">
+                        <button class="px-3 py-1 border border-[#026DB8] rounded-l">&lt;</button>
+                        <button class="px-3 py-1 border border-[#026DB8] text-[#026DB8] ">1</button>
+                        <button class="px-3 py-1 border border-l-0 border-[#026DB8]">2</button>
+                        <button class="px-3 py-1 border border-l-0 border-[#026DB8]">3</button>
+                        <button class="px-3 py-1 border border-l-0 border-[#026DB8]">4</button>
+                        <button class="px-3 py-1 border border-l-0 border-[#026DB8]">5</button>
+                        <button class="px-3 py-1 border border-l-0 border-[#026DB8] rounded-r">&gt;</button>
+                    </div>
+                    
+                    
+                </div>
+            </section> 
+
+
+            
+        
+            <!-- Second Section -->
+            <section class="mt-12 p-6 bg-white shadow-md rounded-lg max-w-2xl mx-auto w-full lg:w-[40%]">
+                <h4 class="text-md text-[#026DB8]  text-start">Talk with our team</h4>
+                <h2 class="text-4xl md:text-5xl font-bold text-start mt-2">Let’s Make It <br /> Happen!</h2>
+                <h4 class="text-2xl text-gray-900  text-start mt-3">Feel Free to Contact Us.</h4>
+                
+                <form class="mt-6 space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full  p-3 bg-[#006FCF3D]  rounded">
+                    <input type="email" placeholder="Your Email" class="w-full p-3 bg-[#006FCF3D]  rounded">
+                    <textarea placeholder="Your Message" class="w-full p-3 bg-[#006FCF3D]  rounded h-32"></textarea>
+                    <button class="w-auto bg-[#026DB8] rounded-full  text-white px-4 py-2 bg-[#006FCF3D]  hover:bg-blue-600">Submit</button>
+                </form>
+            </section>
+        </div>
+        
+       
+
+
+
+        <!-- ----------------------------------------------------------------------------------------- -->
+                                        <!-- Footer -->
+<!-- ----------------------------------------------------------------------------------------- -->
+    
+    <footer class="bg-[#101010] text-white py-10 mt-12">
+        <div class=" mx-auto px-6 lg:px-12 flex flex-col justify-between lg:flex-row gap-12">
+            
+            <div class="lg:w-[500px]">
+                <p class="text-gray-300 text-sm leading-relaxed max-w-3xl">
+                    We’re on a journey to transform ordinary trips into extraordinary ones. We are your guide, bringing you personal experiences. Wherever your travels take you, we’ll show you the unique and unmissable things to do in your destination.
+                </p>
+            </div>
+    
+            <div class="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div>
+                    <h2 class="text-xl font-semibold mb-4">Explore</h2>
+                    <ul class="text-gray-300 text-[13px] space-y-2">
+                        <li><a href="#" class="hover:text-gray-400">Home</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Our Service</a></li>
+                        <li><a href="#" class="hover:text-gray-400">About Us</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Offers</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Blogs</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <div class="-ml-10">
+                    <h2 class="text-xl font-semibold mb-4">Contact</h2>
+                    <p class="text-gray-300 text-[13px] leading-relaxed">
+                        Zaina Mohebi Plaza Building, Near Burjuman Metro Station, Bur Dubai, Dubai, UAE.<br>
+                        <strong>PO Box No:</strong> 181425
+                    </p>
+                    <p class="text-gray-300 text-sm mt-2">
+                        <strong>Telephone:</strong> +44 114 404 0307
+                    </p>
+                    <p class="text-gray-300 text-sm mt-2">
+                        <strong>E-Mail:</strong> <a href="mailto:reception@citrontourism.com" class="hover:text-gray-400">reception@citrontourism.com</a>
+                    </p>
+                </div>
+    
+                <div>
+                    <p class="text-gray-300 text-[13px] leading-relaxed">
+                        We’re on a journey to transform ordinary trips into extraordinary ones. We are your guide, bringing you personal experiences. Wherever your travels take you, we’ll show you the unique and unmissable things to do in your destination.
+                    </p>
+                </div>
+    
+            </div>
+        </div>
+    </footer>
+        
+    </main>
+</body>
+</html>
