@@ -1,11 +1,14 @@
 
-    main {
+.hero_section {
+        
         background-image: url('Images/heroBg.jpg'); 
         background-size: cover;  
         background-position: center;
     }
     body {
         overflow-y: scroll;
+        background-color: #d4d4d4;
+       
     }
     body::-webkit-scrollbar {
         display: none;
@@ -14,13 +17,13 @@
         font-family: 'Roboto', sans-serif;
     }
     .swiper {
-        width: 90%;
+        width: 100%;
         margin: 20px 0;
     }
-    .swiper-slide img {
+    /* .swiper-slide img {
         width: 100%;
-        height: 250px;
+        height: 240px;
         object-fit: cover;
-        border-radius: 10px;
+        border-radius: 20px;
     }
-    
+     */
