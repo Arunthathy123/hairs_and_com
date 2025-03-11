@@ -1,19 +1,39 @@
 // ******************* swiper 1 *********************
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
+    const holidayPackagesContainer = document.getElementById("holiday-packages");
+
+    const holidayPackages = [
+        { img: "Images/holidayPackes.jpg", title: "Beautiful Beach" },
+        { img: "Images/holidayPackes2.jpg", title: "Mountain Retreat" },
+        { img: "Images/holidayPackes3.jpg", title: "City Lights" },
+        { img: "Images/holidayPackes4.jpg", title: "Nature Escape" }
+    ];
+
+    holidayPackages.forEach(package => {
+        const slide = document.createElement("div");
+        slide.classList.add("swiper-slide", "relative");
+        slide.innerHTML = `
+            <img src="${package.img}" class="w-full h-[240px] object-cover rounded-2xl" alt="${package.title}">
+            <div class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black via-black/50 to-transparent rounded-b-2xl"></div>
+            <p class="absolute bottom-2 left-4 text-white font-medium text-lg">${package.title}</p>
+        `;
+        holidayPackagesContainer.appendChild(slide);
+    });
+
     var swiper = new Swiper(".swiper1", {
-        slidesPerView: 3.5,  
-        spaceBetween: 20,    
-        loop: true,          
-        centeredSlides: false, 
+        slidesPerView: 3.5,
+        spaceBetween: 20,
+        loop: true,
+        centeredSlides: false,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
-            reverseDirection: true, 
+            reverseDirection: true,
         },
-        rtl: true,  
+        rtl: true,
         navigation: {
-            nextEl: ".next-btn", 
-            prevEl: ".prev-btn", 
+            nextEl: ".next-btn",
+            prevEl: ".prev-btn",
         },
         breakpoints: {
             320: { slidesPerView: 1.2 },
@@ -323,85 +343,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (link.getAttribute("href") === currentPage) {
             link.classList.add("active");
         }
-    });
-});
-
-// ********************* blog data in About us ************************************************
-
-document.addEventListener("DOMContentLoaded", function () {
-    const blogData = [
-        {
-            title: "5 Hidden Gems in Dubai You Need to Visit",
-            description: "Discover Dubai beyond the skyscrapers and luxury shopping—explore secret spots that will leave you in awe",
-            date: "10 March 2025",
-            shares: "1K Shares",
-            image: "/Images/blog1.jpg"
-        },
-        {
-            title: "5 Hidden Gems in Dubai You Need to Visit",
-            description: "From fun-filled theme parks to serene beaches, here’s how to make the most of your family vacation in the UAE",
-            date: "11 March 2025",
-            shares: "500 Shares",
-            image: "/Images/aboutblog2.jpg"
-        },
-        {
-            title: "5 Hidden Gems in Dubai You Need to Visit",
-            description: "All the essentials for a smooth European journey—visa requirements, application tips, and insider advice",
-            date: "12 March 2025",
-            shares: "750 Shares",
-            image: "/Images/aboutblog3.jpg"
-        },
-        {
-            title: "5 Hidden Gems in Dubai You Need to Visit",
-            description: "Experience the ultimate in luxury with private tours, 5-star resorts, and exclusive experiences in the UAE",
-            date: "10 March 2025",
-            shares: "1K Shares",
-            image: "/Images/aboutblog4.png"
-        },
-        {
-            title: "5 Hidden Gems in Dubai You Need to Visit",
-            description: "From fun-filled theme parks to serene beaches, here’s how to make the most of your family vacation in the UAE",
-            date: "11 March 2025",
-            shares: "500 Shares",
-            image: "/Images/aboutblog2.jpg"
-        },
-        {
-            title: "5 Hidden Gems in Dubai You Need to Visit",
-            description: "From fun-filled theme parks to serene beaches, here’s how to make the most of your family vacation in the UAE",
-            date: "12 March 2025",
-            shares: "750 Shares",
-            image: "/Images/aboutblog2.jpg"
-        }
-    ];
-
-    const cardContainer = document.getElementById("cardContainer");
-
-    blogData.forEach((blog) => {
-        const card = document.createElement("div");
-        card.classList.add("flex",  "p-4" );
-
-        card.innerHTML = `
-            <div class=" flex flex-col md:flex-row w-full">
-                <img src="${blog.image}" class="w-56 aspect-[3/2] object-cover rounded-lg" />
-
-                <div class="ml-4 ">
-                    <h3 class="font-bold text-lg">${blog.title}</h3>
-                    <p class="text-gray-600 text-sm mt-3">${blog.description}</p>
-                    <p class="text-xs text-gray-500 mt-4 mb-4">Published on: ${blog.date}</p>
-                    <div class="flex justify-between items-center mt-4">
-                        <button class="text-gray-950 font-medium bg-[#026db8] text-white px-4 py-2 rounded-full">View Post</button>
-                        <div class="flex items-center gap-2">
-                            <img src="/Images/shareIcon.png" class="w-3 h-3"/>
-                            <span class="text-[#6c757d] text-[13px]">${blog.shares}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-        `;
-
-        cardContainer.appendChild(card);
     });
 });
 
