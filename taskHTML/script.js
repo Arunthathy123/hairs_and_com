@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function () {
         faqItem.classList.add("border-b", "border-gray-300", "py-2");
 
         faqItem.innerHTML = `
-            <button class="bg-[#dbdbdb] p-4 flex justify-between items-center w-3/4 text-left text-lg font-medium text-gray-800 focus:outline-none faq-toggle">
+            <button class="bg-[#dbdbdb] p-4 flex justify-between items-center w-3/4 text-left text-[20px] font-bold  text-gray-950 focus:outline-none faq-toggle">
                 ${faq.question}
                 <span class="faq-icon text-[#026DB8]">
                     <img src="/Images/down.png" class="w-10 h-10"/>
